@@ -62,7 +62,6 @@
             <h3>Sobre el creador</h3>
             <article class="sobre_mi">
                 <img src="img/programador.png" alt="avatar" class="img">
-                <!-- <span><a href="https://www.flaticon.es/iconos-gratis/usuario" title="usuario iconos">Usuario iconos creados por Freepik - Flaticon</a></span> -->
                 <p class="fortaleza">Creativo por accidente</p>
                 <span class="creativo">¿o eso significa serlo?</span>
                 <p class="text_sobre_mi">Soy una persona con grata disciplina a quien le encanta leer y hacer ejercicio, estudio programación de software con enfoque al desarrollo de aplicaciones Web. <br><br>Me encanta aprender y enseñar.</p>
@@ -90,12 +89,32 @@
                     <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
                 </svg>
                 </a>
-            <!-- <a href="#">YT</a> -->
+
             </article>
             
         </section>
     </footer>
 
+
+    <script>
+    document.querySelector('audio').play()
+
+    const reproducirSonido = function() 
+    {
+        let audio = document.createElement('audio');
+        audio.setAttribute('style', 'display: none');
+        audio.setAttribute('autoplay', true)
+        audio.setAttribute('loop', true)
+        audio.type = "audio/mpeg"
+        audio.src = "musica.mp3"
+        audio.volume = 0.06
+
+        document.body.appendChild(audio);
+        document.removeEventListener('mouseover', reproducirSonido);
+    }
+
+    document.addEventListener('mouseover', reproducirSonido);
+    </script>
 
     <script type="module" src="js/index.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
